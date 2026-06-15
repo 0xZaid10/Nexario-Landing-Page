@@ -46,7 +46,9 @@ function App() {
     r.style.setProperty("--font-mono", fp.mono);
   }, [t.accent, t.fontPair]);
 
-  const onLaunch = () => go("Agents");
+  const onLaunch = () => {
+    window.open("https://app.nexario.buzz", "_blank");
+  };
 
   let Page = null;
   if (route === "Home") Page = <HomePage bgMode={t.bgMode} live={t.liveStats} go={go} onLaunch={onLaunch} />;
